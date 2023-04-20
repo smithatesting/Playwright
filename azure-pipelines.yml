@@ -15,8 +15,7 @@ jobs:
                 workingDirectory: 'my-e2e-tests'
                 targetType: 'inline'
                 failOnStderr: true
-                env:
-                  CI: true
+                
                 script: |
                   npm ci
                   npx playwright test
