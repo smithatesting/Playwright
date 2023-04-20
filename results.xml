@@ -1,0 +1,157 @@
+<testsuites id="" name="" tests="6" failures="3" skipped="0" errors="0" time="35.05415699999035">
+<testsuite name="adactin.spec.ts" timestamp="2023-04-14T09:57:05.661Z" hostname="chromium" tests="6" failures="3" skipped="0" time="88.228" errors="0">
+<testcase name="Adactin › PLAYW-3 | login-101" classname="adactin.spec.ts" time="3.957">
+<system-out>
+<![CDATA[status [90mundefined[39m
+]]>
+</system-out>
+</testcase>
+<testcase name="Adactin › PLAYW-6 | 102-To verify whether the check-out date field accepts a later date than check i date" classname="adactin.spec.ts" time="30.008">
+<failure message="adactin.spec.ts:15:9 PLAYW-6 | 102-To verify whether the check-out date field accepts a later date than check i date" type="FAILURE">
+<![CDATA[  [chromium] › adactin.spec.ts:15:9 › Adactin › PLAYW-6 | 102-To verify whether the check-out date field accepts a later date than check i date 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.textContent: Target closed
+    =========================== logs ===========================
+    waiting for locator('span[id=\'checkin_span\']')
+    ============================================================
+
+      40 |         await adactin.search.click();
+      41 |
+    > 42 |         const tt = await page.locator("span[id='checkin_span']").textContent()
+         |                                                                  ^
+      43 |         await expect(tt).toContain('Check-In Date shall be before than Check-Out Date')
+      44 |         // await expect(page).toMatch()
+      45 |         // await expect(page).toContain('Check-In Date shall be before than Check-Out Date')
+
+        at C:\Users\SMITHA D\Documents\playwright\tests\adactin.spec.ts:42:66
+
+    Pending operations:
+      - locator.textContent at tests\adactin.spec.ts:42:66
+
+]]>
+</failure>
+<system-out>
+<![CDATA[14
+14/11/2023
+14/9/2023
+status {
+  message: [32m'\x1B[31mTest timeout of 30000ms exceeded.\x1B[39m'[39m,
+  stack: [90mundefined[39m
+}
+PLAYW-6 | 102-To verify whether the check-out date field accepts a later date than check i date did not run as expected!
+]]>
+</system-out>
+</testcase>
+<testcase name="Adactin › PLAYW-7 | 103-To check if error is reported if check-out date field is in the past" classname="adactin.spec.ts" time="30.013">
+<failure message="adactin.spec.ts:48:9 PLAYW-7 | 103-To check if error is reported if check-out date field is in the past" type="FAILURE">
+<![CDATA[  [chromium] › adactin.spec.ts:48:9 › Adactin › PLAYW-7 | 103-To check if error is reported if check-out date field is in the past 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.textContent: Target closed
+    =========================== logs ===========================
+    waiting for locator('span[id=\'checkin_span\']')
+    ============================================================
+
+      73 |         await adactin.search.click();
+      74 |
+    > 75 |         const ee = await page.locator("span[id='checkin_span']").textContent();
+         |                                                                  ^
+      76 |         await expect(ee).toContain('Check-In Date shall be before than Check-Out Date')
+      77 |         //span[id='checkin_span']
+      78 |
+
+        at C:\Users\SMITHA D\Documents\playwright\tests\adactin.spec.ts:75:66
+
+    Pending operations:
+      - locator.textContent at tests\adactin.spec.ts:75:66
+
+]]>
+</failure>
+<system-out>
+<![CDATA[14
+14/-1/2023
+14/1/2023
+status {
+  message: [32m'\x1B[31mTest timeout of 30000ms exceeded.\x1B[39m'[39m,
+  stack: [90mundefined[39m
+}
+PLAYW-7 | 103-To check if error is reported if check-out date field is in the past did not run as expected!
+]]>
+</system-out>
+</testcase>
+<testcase name="Adactin › PLAYW-8 |104 -location verification" classname="adactin.spec.ts" time="10.544">
+<system-out>
+<![CDATA[14
+14/5/2023
+locationSydneylocation
+location=Sydney
+success
+status [90mundefined[39m
+]]>
+</system-out>
+</testcase>
+<testcase name="Adactin › PLAYW-9 | 105-To verify whether Check-in date and Check-out date are being displayed in Select Hotel page" classname="adactin.spec.ts" time="9.635">
+<failure message="adactin.spec.ts:121:9 PLAYW-9 | 105-To verify whether Check-in date and Check-out date are being displayed in Select Hotel page" type="FAILURE">
+<![CDATA[  [chromium] › adactin.spec.ts:121:9 › Adactin › PLAYW-9 | 105-To verify whether Check-in date and Check-out date are being displayed in Select Hotel page 
+
+    Error: expect(14/04/2023).toContain(14) // indexOf
+
+    Matcher error: expected value must be a string if received value is a string
+
+    Expected has type:  number
+    Expected has value: 14
+    Received has type:  string
+    Received has value: "14/04/2023"
+
+      146 |         //get the date from the page and compare
+      147 |         const ee = await page.locator("//input[contains(@name,'arr_date') and @type='text']").getAttribute('value')
+    > 148 |         await expect(ee).toContain(date)
+          |                          ^
+      149 |
+      150 |         page.waitForTimeout(50000)
+      151 |
+
+        at C:\Users\SMITHA D\Documents\playwright\tests\adactin.spec.ts:148:26
+]]>
+</failure>
+<system-out>
+<![CDATA[Issue 'PLAYW-3 | login-101' was successfully added to 'Playwright' project.
+[33m15[39m
+NaN/2023
+status {
+  message: [32m'\x1B[2mexpect(\x1B[22m\x1B[31m14/04/2023\x1B[39m\x1B[2m).\x1B[22mtoContain\x1B[2m(\x1B[22m\x1B[32m14\x1B[39m\x1B[2m) // indexOf\x1B[22m\n'[39m +
+    [32m'\n'[39m +
+    [32m'\x1B[1mMatcher error\x1B[22m: \x1B[32mexpected\x1B[39m value must be a string if \x1B[31mreceived\x1B[39m value is a string\n'[39m +
+    [32m'\n'[39m +
+    [32m'Expected has type:  number\n'[39m +
+    [32m'Expected has value: \x1B[32m14\x1B[39m\n'[39m +
+    [32m'Received has type:  string\n'[39m +
+    [32m'Received has value: \x1B[31m"14/04/2023"\x1B[39m'[39m,
+  stack: [32m'Error: \x1B[2mexpect(\x1B[22m\x1B[31m14/04/2023\x1B[39m\x1B[2m).\x1B[22mtoContain\x1B[2m(\x1B[22m\x1B[32m14\x1B[39m\x1B[2m) // indexOf\x1B[22m\n'[39m +
+    [32m'\n'[39m +
+    [32m'\x1B[1mMatcher error\x1B[22m: \x1B[32mexpected\x1B[39m value must be a string if \x1B[31mreceived\x1B[39m value is a string\n'[39m +
+    [32m'\n'[39m +
+    [32m'Expected has type:  number\n'[39m +
+    [32m'Expected has value: \x1B[32m14\x1B[39m\n'[39m +
+    [32m'Received has type:  string\n'[39m +
+    [32m'Received has value: \x1B[31m"14/04/2023"\x1B[39m\n'[39m +
+    [32m'    at C:\\Users\\SMITHA D\\Documents\\playwright\\tests\\adactin.spec.ts:148:26'[39m
+}
+PLAYW-9 | 105-To verify whether Check-in date and Check-out date are being displayed in Select Hotel page did not run as expected!
+]]>
+</system-out>
+</testcase>
+<testcase name="Adactin › PLAYW-10 | 106-Verify" classname="adactin.spec.ts" time="4.071">
+<system-out>
+<![CDATA[Issue 'PLAYW-8 |104 -location verification' was successfully added to 'Playwright' project.
+14
+14/5/2023
+status [90mundefined[39m
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

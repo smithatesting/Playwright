@@ -1,0 +1,16 @@
+{
+  "name": "lambdatest-playwright-sample",
+  "scripts": {
+    "test": "node playwright-single.js",
+    "test-smartui": "node playwright-smartui.js",
+    "test-parallel": "node playwright-parallel.js"
+  },
+  "engines": {
+    "node": ">=12.7.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.29.2",
+    "playwright": "1.29.2",
+    "@cucumber/cucumber": "^7.3.2"
+  }
+}
