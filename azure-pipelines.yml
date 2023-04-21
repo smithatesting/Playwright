@@ -1,7 +1,6 @@
-jobs:
-    - deployment: Run_E2E_Tests
+deployment: Run_E2E_Tests
       pool:
-        vmImage: windows-latest
+        vmImage: ubuntu-20.04
       container: mcr.microsoft.com/playwright:v1.32.0-focal
       environment: testing
       strategy:
@@ -15,7 +14,18 @@ jobs:
                 workingDirectory: 'my-e2e-tests'
                 targetType: 'inline'
                 failOnStderr: true
-                
+                env:
+                  CI: true
                 script: |
-                  npm install
+                  npm ci
                   npx playwright test
+            - task: PublishTestResults@2
+              displayName: 'Publish test results'
+              inputs:
+                searchFolder: 'my-e2e-tests/test-results'
+                testResultsFormat: 'JUnit'
+                testResultsFiles: 'e2e-junit-results.xml' 
+                mergeTestResults: true
+                failTaskOnFailedTests: true
+                testRunTitle: 'My End-To-End Tests'
+              condition: succeededOrFailed()
