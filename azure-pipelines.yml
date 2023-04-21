@@ -1,4 +1,5 @@
-deployment: Run_E2E_Tests
+jobs:
+    - deployment: Run_E2E_Tests
       pool:
         vmImage: ubuntu-20.04
       container: mcr.microsoft.com/playwright:v1.32.0-focal
@@ -14,8 +15,7 @@ deployment: Run_E2E_Tests
                 workingDirectory: 'my-e2e-tests'
                 targetType: 'inline'
                 failOnStderr: true
-                env:
-                  CI: true
+                
                 script: |
                   npm ci
                   npx playwright test
