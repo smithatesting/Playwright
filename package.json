@@ -12,6 +12,7 @@
     "playwright-xray": "^0.5.3"
   },
   "dependencies": {
+    "@alex_neo/playwright-azure-reporter": "^1.5.6",
     "csv-parse": "^5.3.6",
     "date-and-time": "^2.4.3",
     "jira.js": "^2.17.0",

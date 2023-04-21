@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test'
 import {AdactinHome}  from '..//Pages/Adactin.pages';
 import { jiraupdate } from '../Utils/Jira.spec';
+import { AzureReporterOptions } from '@alex_neo/playwright-azure-reporter/dist/playwright-azure-reporter';
 import fs from 'fs';
 import path from 'path';
 import { parse } from 'csv-parse/sync';

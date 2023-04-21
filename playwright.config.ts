@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
-import { Buffer } from 'buffer';
+
+import { Buffer } from 'buffer';import { AzureReporterOptions } from '@alex_neo/playwright-azure-reporter/dist/playwright-azure-reporter';
 
 const xrayOptions = {
   // Whether to add <properties> with all annotations; default is false
@@ -42,20 +43,33 @@ export default defineConfig({
  // reporter: [['html',]],
   //reporter: [['junit', { outputFile: 'results.xml' }]],
   
-  reporter: [['html', { open: 'never' }],['playwright-xray', { 
-    jira: {
-      url: 'https://playwrighttest.atlassian.net/',
-      type: 'cloud'
-    },
-    cloud: {
-      client_id: '16227D6A402444B6B2F74C649E6508A1',
-      client_secret: 'eb97920c4853370eccc521f7ca93468fe3e9eb5aab60ccfcec9846f9ff13f245',
-      
-    },
-    projectKey: 'DEM',
-    testPlan: 'DEM-14',
-    debug: true
-  }]],
+  reporter: [['html', { open: 'never' }], /*[
+    '@alex_neo/playwright-azure-reporter',
+    {
+      orgUrl: 'https://dev.azure.com/your-organization-name',
+      token: process.env.AZURE_TOKEN,
+      planId: 44,
+      projectName: 'SampleSample',
+      environment: 'AQA',
+      logging: true,
+      testRunTitle: 'Playwright Test Run',
+      publishTestResultsMode: 'testRun',
+      uploadAttachments: true,
+      attachmentsType: ['screenshot', 'video', 'trace'],
+      testRunConfig: {
+        owner: {
+          displayName: 'Alex Neo',
+        },
+        comment: 'Playwright Test Run',
+        // the configuration ids of this test run, use 
+        // https://dev.azure.com/{organization}/{project}/_apis/test/configurations to get the ids of  your project.
+        // if multiple configuration ids are used in one run a testPointMapper should be used to pick the correct one, 
+        // otherwise the results are pushed to all.
+        configurationIds: [ 1 ],
+      },
+    } as AzureReporterOptions,
+  ],*/
+],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
