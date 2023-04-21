@@ -17,5 +17,5 @@ jobs:
                 failOnStderr: true
                 
                 script: |
-                  npm ci
+                  npm install
                   npx playwright test
