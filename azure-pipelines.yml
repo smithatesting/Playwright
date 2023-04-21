@@ -1,31 +1,20 @@
-jobs:
-    - deployment: Run_E2E_Tests
-      pool:
-        vmImage: windows10
-      container: mcr.microsoft.com/playwright:v1.32.0-focal
-      environment: testing
-      strategy:
-        runOnce:
-          deploy:
-            steps:
-            - checkout: self
-            - task: Bash@3
-              displayName: 'Run Playwright tests'
-              inputs:
-                workingDirectory: 'my-e2e-tests'
-                targetType: 'inline'
-                failOnStderr: true
-                
-                script: |
-                  npm ci
-                  npx playwright test
-            - task: PublishTestResults@2
-              displayName: 'Publish test results'
-              inputs:
-                searchFolder: 'my-e2e-tests/test-results'
-                testResultsFormat: 'JUnit'
-                testResultsFiles: 'e2e-junit-results.xml' 
-                mergeTestResults: true
-                failTaskOnFailedTests: true
-                testRunTitle: 'My End-To-End Tests'
-              condition: succeededOrFailed()
+trigger:
+- tests/playwright
+pool:
+  vmImage: 'windows-latest'
+steps:
+- script: echo Running azure-pipelines.yml...
+  displayName: 'Run a one-line script'
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.x'
+  displayName: 'nodetool 16.x'
+- task: Npm@1
+  inputs:
+    command: 'ci'
+- task: CmdLine@2
+  inputs:
+    script: 'npx playwright install --with-deps'
+- task: CmdLine@2
+  inputs:
+    script: 'set CI=true && echo %CI% && npx playwright test'
