@@ -1,12 +1,12 @@
-<testsuites id="" name="" tests="8" failures="2" skipped="0" errors="0" time="36.5240529999733">
-<testsuite name="adactin.spec.ts" timestamp="2023-04-28T09:41:39.085Z" hostname="chromium" tests="8" failures="2" skipped="0" time="83.302" errors="0">
-<testcase name="Adactin › [97] login-101" classname="adactin.spec.ts" time="5.116">
+<testsuites id="" name="" tests="8" failures="2" skipped="0" errors="0" time="36.921924000024795">
+<testsuite name="adactin.spec.ts" timestamp="2023-04-28T10:06:02.270Z" hostname="chromium" tests="8" failures="2" skipped="0" time="86.991" errors="0">
+<testcase name="Adactin › [97] login-101" classname="adactin.spec.ts" time="5.134">
 <system-out>
 <![CDATA[status passed
 ]]>
 </system-out>
 </testcase>
-<testcase name="Adactin › [101] 102-To verify whether the check-out date field accepts a later date than check i date" classname="adactin.spec.ts" time="30.012">
+<testcase name="Adactin › [101] 102-To verify whether the check-out date field accepts a later date than check i date" classname="adactin.spec.ts" time="30.007">
 <failure message="adactin.spec.ts:28:9 [101] 102-To verify whether the check-out date field accepts a later date than check i date" type="FAILURE">
 <![CDATA[  [chromium] › adactin.spec.ts:28:9 › Adactin › [101] 102-To verify whether the check-out date field accepts a later date than check i date 
 
@@ -43,7 +43,7 @@ status timedOut
 ]]>
 </system-out>
 </testcase>
-<testcase name="Adactin › [102] 103-To check if error is reported if check-out date field is in the past" classname="adactin.spec.ts" time="30.012">
+<testcase name="Adactin › [102] 103-To check if error is reported if check-out date field is in the past" classname="adactin.spec.ts" time="30">
 <failure message="adactin.spec.ts:62:9 [102] 103-To check if error is reported if check-out date field is in the past" type="FAILURE">
 <![CDATA[  [chromium] › adactin.spec.ts:62:9 › Adactin › [102] 103-To check if error is reported if check-out date field is in the past 
 
@@ -80,7 +80,7 @@ status timedOut
 ]]>
 </system-out>
 </testcase>
-<testcase name="Adactin › [103] 104 -location verification" classname="adactin.spec.ts" time="7.375">
+<testcase name="Adactin › [103] 104 -location verification" classname="adactin.spec.ts" time="11.517">
 <system-out>
 <![CDATA[28
 28/5/2023
@@ -91,7 +91,7 @@ status passed
 ]]>
 </system-out>
 </testcase>
-<testcase name="Adactin › [104] 105-To verify whether Check-in date and Check-out date are being displayed in Select Hotel page" classname="adactin.spec.ts" time="4.973">
+<testcase name="Adactin › [104] 105-To verify whether Check-in date and Check-out date are being displayed in Select Hotel page" classname="adactin.spec.ts" time="4.898">
 <system-out>
 <![CDATA[[33m29[39m
 NaN/2023
@@ -99,7 +99,7 @@ status passed
 ]]>
 </system-out>
 </testcase>
-<testcase name="Adactin › [105] 106-Verify the no.of rooms" classname="adactin.spec.ts" time="5.333">
+<testcase name="Adactin › [105] 106-Verify the no.of rooms" classname="adactin.spec.ts" time="4.943">
 <system-out>
 <![CDATA[28
 28/5/2023
@@ -107,13 +107,13 @@ status passed
 ]]>
 </system-out>
 </testcase>
-<testcase name="Apitest › [106] Create a user" classname="adactin.spec.ts" time="0.386">
+<testcase name="Apitest › Create a user" classname="adactin.spec.ts" time="0.412">
 <system-out>
 <![CDATA[API
 ]]>
 </system-out>
 </testcase>
-<testcase name="Apitest › [107] Get the details of user" classname="adactin.spec.ts" time="0.095">
+<testcase name="Apitest › Get the details of user" classname="adactin.spec.ts" time="0.08">
 </testcase>
 </testsuite>
 </testsuites>

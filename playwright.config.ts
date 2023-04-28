@@ -45,8 +45,8 @@ export default defineConfig({
     '@alex_neo/playwright-azure-reporter',
     {
       orgUrl: 'https://dev.azure.com/DevOpsXperts-POC',
-      token:'nj2qxuq2e33wcqkx444ubuzncwoowstiucgl54ej4u7pbltuoz6a',
-      planId: 99,
+      token:'mvpybhaqzyhhr3kh3ektu4jt2a2nkikskxck5zzjbrkmwoyqmhrq',
+      planId: 98,
       projectName: 'PlaywrightDemo',
       environment: 'AQA',
       logging: true,

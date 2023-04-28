@@ -211,7 +211,7 @@ test.afterEach(async ({page}, testInfo) => {
       
 })
 test.describe('Apitest', () => {
-test('[106] Create a user', async ({ request }) => {
+test('Create a user', async ({ request }) => {
   const _response=await request.post("https://reqres.in/api/users", {
       data: {
               "name": "Nitish",
@@ -222,7 +222,7 @@ test('[106] Create a user', async ({ request }) => {
   expect(_response.status()).toBe(201);
   expect(_response.ok()).toBeTruthy();
 })
-test('[107] Get the details of user', async ({ request }) => {
+test('Get the details of user', async ({ request }) => {
     const newIssue = await request.get('https://reqres.in/api/users/2', {  });
     expect ((await newIssue.json()).data.first_name).toEqual("Janet")
     expect(newIssue.ok()).toBeTruthy();
