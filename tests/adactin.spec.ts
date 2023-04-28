@@ -17,7 +17,7 @@ test.describe('Adactin', () => {
     let jupdate
     var location = 'Sydney';
 
-    test('[100] login-101', async ({ page }) => {
+    test('[97] login-101', async ({ page }) => {
         
         adactin = new AdactinHome(page)
 

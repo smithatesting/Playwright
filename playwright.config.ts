@@ -18,8 +18,6 @@ const xrayOptions = {
   outputFile: './xray-report.xml'
 };
 
-
-
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -43,12 +41,12 @@ export default defineConfig({
  // reporter: [['html',]],
   //reporter: [['junit', { outputFile: 'results.xml' }]],
   
-  reporter: [['html', { open: 'never' }], [
+  reporter: [['html', { open: 'never' }],['Junit'], [
     '@alex_neo/playwright-azure-reporter',
     {
       orgUrl: 'https://dev.azure.com/DevOpsXperts-POC',
-      token: process.env.AZURE_TOKEN,
-      planId: 92,
+      token:'nj2qxuq2e33wcqkx444ubuzncwoowstiucgl54ej4u7pbltuoz6a',
+      planId: 99,
       projectName: 'PlaywrightDemo',
       environment: 'AQA',
       logging: true,
