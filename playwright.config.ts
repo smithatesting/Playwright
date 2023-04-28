@@ -41,7 +41,7 @@ export default defineConfig({
  // reporter: [['html',]],
   //reporter: [['junit', { outputFile: 'results.xml' }]],
   
-  reporter: [['html', { open: 'never' }],['Junit'], [
+  reporter: [['html', { open: 'never' }],['junit',{ outputFile: 'playwright-report/results.xml' }], [
     '@alex_neo/playwright-azure-reporter',
     {
       orgUrl: 'https://dev.azure.com/DevOpsXperts-POC',
