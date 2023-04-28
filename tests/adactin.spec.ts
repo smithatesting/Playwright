@@ -17,7 +17,7 @@ test.describe('Adactin', () => {
     let jupdate
     var location = 'Sydney';
 
-    test('DEM-8 | login-101', async ({ page }) => {
+    test('[100] login-101', async ({ page }) => {
         
         adactin = new AdactinHome(page)
 
@@ -25,7 +25,7 @@ test.describe('Adactin', () => {
         await adactin.loginWithCredentials(user_name, password)
         await expect(page).toHaveTitle('Adactin.com - Search Hotel');
     })
-    test('DEM-9 | @smoke 102-To verify whether the check-out date field accepts a later date than check i date', async ({ page }) => {
+    test('[101] 102-To verify whether the check-out date field accepts a later date than check i date', async ({ page }) => {
         adactin = new AdactinHome(page)
 
         await adactin.navigate()
@@ -59,7 +59,7 @@ test.describe('Adactin', () => {
 
 
     })
-    test('DEM-10 | 103-To check if error is reported if check-out date field is in the past', async ({ page }) => {
+    test('[102] 103-To check if error is reported if check-out date field is in the past', async ({ page }) => {
 
         adactin = new AdactinHome(page)
 
@@ -92,7 +92,7 @@ test.describe('Adactin', () => {
 
     })
 
-    test('DEM-11 | 104 -location verification', async ({ page }) => {
+    test('[103] 104 -location verification', async ({ page }) => {
         adactin = new AdactinHome(page)
 
         await adactin.navigate()
@@ -132,7 +132,7 @@ test.describe('Adactin', () => {
 
     })
 
-    test('DEM-12 | 105-To verify whether Check-in date and Check-out date are being displayed in Select Hotel page', async ({ page }) => {
+    test('[104] 105-To verify whether Check-in date and Check-out date are being displayed in Select Hotel page', async ({ page }) => {
         adactin = new AdactinHome(page)
 
         await adactin.navigate()
@@ -162,7 +162,7 @@ test.describe('Adactin', () => {
         await expect(ee).toContain(dat2)
     })
 
-    test('DEM-13 | 106-Verify the no.of rooms', async ({ page }) => {
+    test('[105] 106-Verify the no.of rooms', async ({ page }) => {
         adactin = new AdactinHome(page)
         const room = "1";
         await adactin.navigate()
@@ -211,7 +211,7 @@ test.afterEach(async ({page}, testInfo) => {
       
 })
 test.describe('Apitest', () => {
-test('DEM-140 | Create a user', async ({ request }) => {
+test('[106] Create a user', async ({ request }) => {
   const _response=await request.post("https://reqres.in/api/users", {
       data: {
               "name": "Nitish",
@@ -222,7 +222,7 @@ test('DEM-140 | Create a user', async ({ request }) => {
   expect(_response.status()).toBe(201);
   expect(_response.ok()).toBeTruthy();
 })
-test('DEM-139 |Get the details of user', async ({ request }) => {
+test('[107] Get the details of user', async ({ request }) => {
     const newIssue = await request.get('https://reqres.in/api/users/2', {  });
     expect ((await newIssue.json()).data.first_name).toEqual("Janet")
     expect(newIssue.ok()).toBeTruthy();

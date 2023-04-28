@@ -43,22 +43,22 @@ export default defineConfig({
  // reporter: [['html',]],
   //reporter: [['junit', { outputFile: 'results.xml' }]],
   
-  reporter: [['html', { open: 'never' }], /*[
+  reporter: [['html', { open: 'never' }], [
     '@alex_neo/playwright-azure-reporter',
     {
-      orgUrl: 'https://dev.azure.com/your-organization-name',
+      orgUrl: 'https://dev.azure.com/DevOpsXperts-POC',
       token: process.env.AZURE_TOKEN,
-      planId: 44,
-      projectName: 'SampleSample',
+      planId: 92,
+      projectName: 'PlaywrightDemo',
       environment: 'AQA',
       logging: true,
-      testRunTitle: 'Playwright Test Run',
+      testRunTitle: 'Playwright Demo Run',
       publishTestResultsMode: 'testRun',
       uploadAttachments: true,
       attachmentsType: ['screenshot', 'video', 'trace'],
       testRunConfig: {
         owner: {
-          displayName: 'Alex Neo',
+          displayName: 'Smitha D',
         },
         comment: 'Playwright Test Run',
         // the configuration ids of this test run, use 
@@ -68,7 +68,7 @@ export default defineConfig({
         configurationIds: [ 1 ],
       },
     } as AzureReporterOptions,
-  ],*/
+  ],
 ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
